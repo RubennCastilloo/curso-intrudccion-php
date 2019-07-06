@@ -7,24 +7,24 @@ Tipos escalares:
 boolean:
 Representa solamente un valor verdadero o falso. http://php.net/manual/es/language.types.boolean.php
 Valores válidos: true (verdadero) false (falso)
-``` <?php
+<?php
 $a = true; 
 $b = false; 
-?> ```
+?>
 Integer:
 Representa un número entero positivo, negativo o 0. http://php.net/manual/es/language.types.integer.php
-```<?php
+<?php
 $a = -123;
 $b = 0;
 $c = 7763;
-?>```
+?>
 float o double:
 Representa un número de punto flotante, existen problemas de precisión con los números flotantes debido a la naturaleza binaria de las computadoras. http://php.net/manual/es/language.types.float.php
-```<?php
+<?php
 $a = 12.24; 
 $b = 1.5e3; 
 $c = 7E-10;
-?> ```
+?> 
 string:
 – Representa una cadena de caracteres.
 – Existen 4 formas de representar una cadena. Las 2 principales son usando comillas simples o comillas dobles.
@@ -34,14 +34,14 @@ string:
 
 Si quieres conocer más de este tipo de dato da click aquí.
 
-```<?php
+<?php
 $a = ”Hola”; 
 $b = ‘Mundo’; 
-?>```
+?>
 Tipos compuestos:
 array:
 Representa una colección de valores, aunque por defecto PHP usara índices numéricos, la realidad es que la estructura se representa como un mapa que colecciona pares llave-valor. La sintaxis para definir un arreglo será a partir de corchetes cuadrados, aunque en versiones anteriores de PHP era necesario usar la función array(). Las llaves pueden ser enteros o cadenas y los valores pueden ser de cualquier tipo de PHP, incluso de tipo array. http://php.net/manual/es/language.types.array.php
-```<?php
+<?php
 $array = array(
     "curso1" => "php",
     "curso2" => "js",
@@ -58,10 +58,10 @@ $array = [
     "php",
     "js",
 ];
-?>```
+?>
 object:
 Representa una instancia de una clase. Este tema lo veremos más a fondo en la clase de Programación Orientada a Objetos.
-```<?php
+<?php
 class Car
 {
     function move()
@@ -72,10 +72,10 @@ class Car
 
 $myCar = new Car();
 $myCar->move();
-?>```
+?>
 callable:
 Es un tipo de dato especial que representa a algo que puede ser “llamado”, por ejemplo una función o un método.
-```<?php
+<?php
 // Variable que guarda un callable
 $firstOfArray = function(array $array) {
     if (count($array) == 0) { return null; }
@@ -87,10 +87,10 @@ $values = [3, 2, 1];
 
 // Usamos nuestro callable y se imprime el valor 3
 echo $firstOfArray($values);
-?>```
+?>
 iterable:
 A partir de PHP 7.1 iterable es un pseudo tipo de datos que puede ser recorrido.
-```<?php
+<?php
 
 function foo(iterable $iterable) {
     foreach ($iterable as $valor) {
@@ -98,15 +98,15 @@ function foo(iterable $iterable) {
     } 
 }
 
-?>```
+?>
 Tipos especiales:
 resource:
 Es un tipo de dato especial que representa un recurso externo, por ejemplo un archivo externo a tu aplicación.
-```<?php
+<?php
 $res = fopen("c:\\dir\\file.txt", "r");
-?>```
+?>
 NULL:
 Es un valor especial que se usa para representar una variable sin valor. http://php.net/manual/es/language.types.null.php
-```<?php
+<?php
 $a = null; 
-?>```
+?>
